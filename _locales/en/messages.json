@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "BroPaste – Form Filler & Text Snippets",
+    "description": "Extension name"
+  },
+  "appDescription": {
+    "message": "Quickly fill forms using saved text snippets via context menu or popup. Fast, handy, and secure autofill tool.",
+    "description": "Short extension description for Chrome Web Store and manifest"
+  },
+  "cwsDetailedDescription": {
+    "message": "BroPaste — Fast and secure form filling with saved text snippets. Save frequently used text and quickly insert it into any input field using the context menu or popup. Perfect for registration forms, login pages, surveys, feedback forms, customer support replies, and everyday repetitive typing. ✨ Features • Context Menu integration — right-click any input field and insert saved text instantly  • Unlimited entries — store emails, usernames, addresses, phone numbers, templates, and more  • Drag & Drop sorting — organize your snippets easily  • One-click copy — quickly copy values when needed  • Export & Import — transfer your data between browsers and devices  • 100% local storage — your data stays on your device. BroPaste helps you save time, reduce typing, and stay productive.",
+    "description": "Detailed listing text for CWS"
+  }
+}
