@@ -1,0 +1,639 @@
+/* ====================================
+   IMPORTS & ROOT VARIABLES
+   ==================================== */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('vendor/fonts/inter-v20-cyrillic_latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('vendor/fonts/inter-v20-cyrillic_latin-700.woff2') format('woff2');
+}
+
+
+:root {
+    /* Custom Colors from TZ */
+    --color-primary: #bb010a; /* Dark red */
+    --color-accent: #ffbe34;  /* Yellow */
+
+    /* Slate Colors - inspired by previous CSS for consistency */
+    --color-slate-50: #f8fafc;
+    --color-slate-100: #f1f5f9;
+    --color-slate-200: #e2e8f0;
+    --color-slate-300: #cbd5e1;
+    --color-slate-400: #94a3b8;
+    --color-slate-600: #475569;
+    --color-slate-700: #334155;
+    --color-slate-800: #1e293b;
+    --color-slate-900: #0f172a;
+
+    /* Spacing */
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-8: 2rem;
+
+    /* Border Radius */
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ====================================
+   GLOBAL RESET & BASE STYLES
+   ==================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    min-width: 450px; /* Minimum popup width */
+    max-width: 800px; /* Maximum popup width */
+    width: fit-content; /* Allow popup to fit content initially, within min/max */
+    padding: var(--spacing-6) var(--spacing-6) var(--spacing-2);
+    /* user-select: none; Removed to allow text selection for copy */
+    -webkit-font-smoothing: antialiased;
+    transition: all 0.3s ease;
+    /* overflow: hidden; Removed to allow scrolling if content overflows vertically */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align header items to start for better control */
+    margin-bottom: var(--spacing-6);
+    position: relative; /* For absolute positioning of header-actions */
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-slate-900);
+}
+
+h1 img {
+    width: 48px;
+    height: 48px;
+}
+
+/* New container for "Texts to paste" and Import/Export buttons */
+.top-section-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center them */
+    margin-bottom: var(--spacing-3); /* Space before the table */
+}
+
+.top-section-controls b {
+    font-size: 16px;
+    /* margin-bottom: var(--spacing-3); Removed as flex parent handles spacing */
+    display: block;
+    color: var(--color-slate-700);
+}
+
+/* ====================================
+   THEME STYLES
+   ==================================== */
+/* Light Theme */
+body.light {
+    background: var(--color-slate-50);
+    color: var(--color-slate-900);
+}
+
+body.light h1 {
+    color: var(--color-slate-900);
+}
+
+body.light .top-section-controls b {
+    color: var(--color-slate-700);
+}
+
+body.light textarea,
+body.light input[type="text"],
+body.light input[type="button"],
+body.light button {
+    background: white;
+    border-color: var(--color-slate-200);
+    color: var(--color-slate-800);
+}
+
+body.light textarea:focus,
+body.light input[type="text"]:focus {
+    border-color: var(--color-primary); /* Use primary color for focus in light theme */
+    box-shadow: 0 0 0 3px rgba(187, 1, 10, 0.1); /* Based on primary color */
+}
+
+body.light .btn-delete {
+    color: var(--color-slate-600);
+}
+
+body.light .btn-delete:hover {
+    background: var(--color-slate-100);
+}
+
+body.light .theme-toggle,
+body.light .lang-toggle {
+    background: var(--color-slate-100);
+}
+
+body.light .theme-btn.active,
+body.light .lang-btn.active {
+    background: var(--color-accent); /* Yellow for active toggle */
+    color: var(--color-slate-900); /* Dark text on yellow */
+}
+
+/* Dark Theme */
+body.dark {
+    background: #1f2129;
+    color: #e4e6eb;
+}
+
+body.dark h1 {
+    color: #e4e6eb;
+}
+
+body.dark .top-section-controls b {
+    color: var(--color-slate-300);
+}
+
+body.dark textarea,
+body.dark input[type="text"],
+body.dark input[type="button"],
+body.dark button {
+    background: #2a2d3a;
+    border: 1px solid #3a3d4a;
+    color: #e4e6eb;
+}
+
+body.dark textarea:focus,
+body.dark input[type="text"]:focus {
+    border-color: var(--color-accent); /* Yellow for focus in dark theme */
+    box-shadow: 0 0 0 3px rgba(255, 190, 52, 0.1); /* Based on accent color */
+}
+
+body.dark .btn-delete {
+    color: var(--color-slate-400);
+}
+
+body.dark .btn-delete:hover {
+    background: rgba(187, 1, 10, 0.2);
+}
+
+body.dark .theme-toggle,
+body.dark .lang-toggle {
+    background: #3a3d4a;
+}
+
+body.dark .theme-btn.active,
+body.dark .lang-btn.active {
+    background: var(--color-accent); /* Yellow for active toggle */
+    color: #1f2129; /* Dark text on yellow */
+}
+
+/* ====================================
+   HEADER ACTIONS (Theme/Lang Toggles)
+   ==================================== */
+.header-actions {
+    display: flex;
+    gap: var(--spacing-4);
+    align-items: center;
+    position: absolute; /* Position relative to .header */
+    right: 0;
+    top: 12px;
+}
+
+.theme-toggle,
+.lang-toggle {
+    display: flex;
+    gap: var(--spacing-1);
+    background: var(--color-slate-100);
+    border-radius: var(--radius-sm);
+    padding: 2px;
+}
+
+.theme-btn,
+.lang-btn {
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: 700;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    color: inherit;
+    opacity: 0.5;
+}
+
+.theme-btn i {
+    font-size: 12px;
+}
+
+.theme-btn.active,
+.lang-btn.active {
+    background: var(--color-primary); /* Red for active toggle (default) */
+    color: white;
+    opacity: 1;
+}
+/* Override for dark theme where active button color is yellow */
+body.dark .theme-btn.active,
+body.dark .lang-btn.active {
+    background: var(--color-accent); /* Yellow for dark theme active toggle */
+    color: var(--color-slate-900);
+}
+
+
+.theme-btn:hover:not(.active),
+.lang-btn:hover:not(.active) {
+    opacity: 0.8;
+}
+
+/* ====================================
+   TABLE STYLES (Content Sections)
+   ==================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: var(--spacing-4);
+}
+
+tbody tr {
+    border-bottom: 0px solid var(--color-slate-100);
+    transition: background-color 0.2s ease;
+    cursor: grab; /* Indicate draggable */
+}
+
+body.dark tbody tr {
+    border-bottom-color: #3a3d4a;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding-top: var(--spacing-1); /* Reduced spacing */
+    padding-bottom: var(--spacing-1); /* Reduced spacing */
+}
+
+textarea.content {
+    width: 100%;
+    height: 34px; /* Fixed height */
+    padding: var(--spacing-2);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    border: 1px solid var(--color-slate-300);
+    border-radius: var(--radius-sm);
+    resize: none; /* No resizing */
+    transition: border-color 0.2s, box-shadow 0.2s;
+    cursor: text; /* Allow text selection */
+}
+
+textarea.content:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(187, 1, 10, 0.1);
+}
+body.dark textarea.content:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(255, 190, 52, 0.1);
+}
+
+
+/* Action Buttons for each row */
+.row-actions {
+    display: flex;
+    flex-direction: row; /* Горизонтально вместо вертикально */
+    gap: var(--spacing-1); /* Небольшой отступ между кнопками */
+    align-items: center; /* Выравнивание по центру */
+    padding-left: var(--spacing-2); /* Уменьшенный отступ */
+    vertical-align: middle;
+}
+
+.btn-delete,
+.btn-copy-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px; /* Уменьшенный размер для компактности */
+    height: 28px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    font-size: 13px; /* Чуть меньше иконки */
+    transition: all 0.2s ease;
+    color: var(--color-slate-600);
+}
+
+.btn-copy-row {
+    color: var(--color-slate-600);
+}
+
+.btn-copy-row:hover {
+    background: rgba(255, 190, 52, 0.1);
+    color: var(--color-accent);
+}
+
+body.dark .btn-copy-row {
+    color: var(--color-slate-400);
+}
+
+body.dark .btn-copy-row:hover {
+    background: rgba(255, 190, 52, 0.15);
+    color: var(--color-accent);
+}
+
+.btn-delete:hover {
+    background: rgba(187, 1, 10, 0.1);
+    color: var(--color-primary);
+}
+
+/* Drag and Drop styles */
+tbody tr.dragging {
+    opacity: 0.5;
+}
+
+tbody tr.drag-over-top {
+    border-top: 2px solid var(--color-accent);
+}
+
+tbody tr.drag-over-bottom {
+    border-bottom: 2px solid var(--color-accent);
+}
+
+
+/* ====================================
+   IMPORT/EXPORT ACTIONS
+   ==================================== */
+.actions-import-export {
+    display: flex;
+    gap: var(--spacing-2);
+    /* margin-bottom: var(--spacing-6); Removed as parent handles spacing */
+    flex-wrap: wrap;
+    justify-content: flex-end; /* Align right within its container */
+}
+
+input[type="button"],
+button {
+    padding: var(--spacing-2) var(--spacing-4);
+    border: 1px solid var(--color-slate-300);
+    border-radius: var(--radius-sm);
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: white;
+    color: var(--color-slate-800);
+    box-shadow: var(--shadow-sm);
+}
+
+input[type="button"]:hover,
+button:hover {
+    opacity: 0.9;
+    background: var(--color-slate-100);
+}
+
+.btn-import, .btn-export {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-1);
+    background: var(--color-slate-200);
+    border-color: var(--color-slate-200);
+    color: var(--color-slate-700);
+}
+
+body.dark .btn-import, body.dark .btn-export {
+    background: #3a3d4a;
+    border-color: #3a3d4a;
+    color: #e4e6eb;
+}
+
+.btn-import:hover, .btn-export:hover {
+    background: var(--color-slate-300);
+    border-color: var(--color-slate-300);
+}
+body.dark .btn-import:hover, body.dark .btn-export:hover {
+    background: #475569;
+    border-color: #475569;
+}
+
+
+.btn-import i, .btn-export i {
+    font-size: 16px;
+}
+
+/* File input hidden */
+.hidden {
+    display: none !important;
+}
+
+/* ====================================
+   ACTION BUTTONS FOOTER (Add, Save/Cancel)
+   ==================================== */
+.action-buttons-footer { /* New class name */
+    display: flex;
+    gap: var(--spacing-2);
+    justify-content: flex-end;
+    padding-top: var(--spacing-4);
+    border-top: 1px solid var(--color-slate-200);
+    margin-top: var(--spacing-4); /* Add top margin for separation */
+}
+
+body.dark .action-buttons-footer {
+    border-top-color: #3a3d4a;
+}
+
+#addentry {
+    background: var(--color-accent); /* Yellow for add button */
+    color: var(--color-slate-900); /* Dark text on yellow */
+    border-color: var(--color-accent);
+}
+
+#addentry:hover {
+    background: #f7a900; /* Darker yellow on hover */
+    border-color: #f7a900;
+}
+
+#save {
+    background: var(--color-primary); /* Red for save button */
+    color: white;
+    border-color: var(--color-primary);
+}
+
+#save:hover {
+    background: #8b0108; /* Darker red on hover */
+    border-color: #8b0108;
+}
+
+#cancel {
+    background: var(--color-slate-300);
+    color: var(--color-slate-800);
+    border-color: var(--color-slate-300);
+}
+
+body.dark #cancel {
+    background: #3a3d4a;
+    border-color: #3a3d4a;
+    color: #e4e6eb;
+}
+
+body.dark #cancel:hover {
+    background: var(--color-slate-400);
+    border-color: var(--color-slate-400);
+}
+
+
+/* ====================================
+   INFO FOOTER
+   ==================================== */
+.info-footer { /* New class for informational footer */
+    display: flex;
+    justify-content: space-between; /* Pushes content to left and right */
+    align-items: center;
+    padding: var(--spacing-4) var(--spacing-2) 0 0; /* Padding for separation from top/bottom */
+    border-top: 1px solid var(--color-slate-200); /* Separator line */
+    margin-top: var(--spacing-5); /* Small margin from action buttons */
+}
+
+body.dark .info-footer {
+    border-top-color: #3a3d4a;
+}
+
+.footer-version {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    opacity: 0.6;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+.footer-info i {
+    color: var(--color-primary); /* Use primary color for footer icon */
+}
+.logo-text {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-primary);
+    letter-spacing: -0.025em;
+}
+body.dark .logo-text {
+    color: #bb010a;
+}
+
+.logo-accent {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--color-accent);
+    letter-spacing: -0.025em;
+}
+/* ====================================
+   COPY BUTTONS (новые стили)
+   ==================================== */
+
+/* Контейнер для кнопок */
+.row-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 0 10px;
+    height: 100%;
+}
+
+/* Общий стиль для кнопок копирования и удаления */
+.btn-copy-row, .btn-delete {
+    all: unset; /* Сброс браузерных стилей */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    color: var(--color-slate-400);
+}
+
+.btn-copy-row:active, .btn-delete:active {
+    transform: scale(0.9);
+}
+
+/* --- Кнопка Копирования (Акцентный желтый) --- */
+.btn-copy-row:hover {
+    color: var(--color-accent) !important;
+    background-color: rgba(255, 190, 52, 0.15) !important; /* Мягкий желтый */
+}
+
+/* --- Кнопка Удаления (Основной красный) --- */
+.btn-delete:hover {
+    color: var(--color-primary) !important;
+    background-color: rgba(187, 1, 10, 0.1) !important; /* Мягкий красный */
+}
+
+/* --- Адаптация для Светлой темы --- */
+body.light .btn-copy-row {
+    color: var(--color-slate-500);
+}
+body.light .btn-copy-row:hover {
+    background-color: rgba(255, 190, 52, 0.25) !important; /* Плотнее для светлого фона */
+}
+
+body.light .btn-delete {
+    color: var(--color-slate-500);
+}
+body.light .btn-delete:hover {
+    background-color: rgba(187, 1, 10, 0.15) !important;
+}
+
+/* --- Выравнивание ячеек и контента --- */
+#liste td {
+    vertical-align: middle;
+    padding: 6px 0;
+}
+
+body.dark #liste td {
+    border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+textarea.content {
+    display: block;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    resize: none;
+    line-height: 1.4;
+    vertical-align: middle;
+}

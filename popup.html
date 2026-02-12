@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title data-i18n="optionsTitle">BroPaste</title>
+<link rel="stylesheet" href="popup.css">
+<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+</head>
+<body class="dark"> <!-- Default theme class, will be overridden by JS -->
+<div class="header">
+    <h1><img src="icons/icon128.png" alt="BroPaste Icon"/> <!--<span data-i18n="optionsHeading">BroPaste</span>-->
+	<div class="logo">
+                    <span class="logo-text">BRO</span><span class="logo-accent">PASTE</span>
+                </div>
+	</h1>
+
+    <div class="header-actions">
+        <div class="theme-toggle">
+            <button class="theme-btn" data-theme="light" title="Светлая / Light"><i class="fas fa-sun"></i></button>
+            <button class="theme-btn" data-theme="dark" title="Темная / Dark"><i class="fas fa-moon"></i></button>
+        </div>
+        <div class="lang-toggle">
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+        </div>
+    </div>
+</div>
+
+<div class="top-section-controls">
+    <b><span data-i18n="textsToPaste">Texts to paste:</span></b>
+    <div class="actions-import-export">
+        <input id="importData" type="file" accept=".json" class="hidden">
+        <button id="importBtn" class="btn-import"><i class="fas fa-file-import"></i> <span data-i18n="importButton"></span></button>
+        <button id="exportBtn" class="btn-export"><i class="fas fa-file-export"></i> <span data-i18n="exportButton"></span></button>
+    </div>
+</div>
+
+<table border="0">
+<tbody id="liste">
+</tbody>
+</table>
+
+<div class="action-buttons-footer"> <!-- Renamed from 'footer' to avoid conflict with the actual footer tag -->
+    <input id="addentry" type="button" value="" data-i18n="addEntryButton" />
+    <input id="save" type="button" value="" data-i18n="saveButton" />
+    <input id="cancel" type="button" value="" data-i18n="cancelButton" />
+</div>
+
+<footer class="info-footer"> <!-- Class for the informational footer -->
+    <div class="footer-version">BROPASTE ENGINE V1.0</div>
+    <div class="footer-info">
+        <i class="fas fa-shield-alt"></i>
+        <span class="footer-text">BroExtentions</span>
+    </div>
+</footer>
+
+<script src="popup.js"></script>
+</body>
+</html>
