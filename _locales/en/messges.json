@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "BroPaste",
+    "description": "Extension name"
+  },
+  "appDescription": {
+    "message": "Quickly fill forms using saved text snippets via context menu or popup. Fast, handy, and secure autofill tool.",
+    "description": "Short extension description for Chrome Web Store and manifest"
+  },
+  "cwsDetailedDescription": {
+    "message": "BroPaste — Convenient form filling via context menu\n\nChrome extension for quick filling of registration forms, surveys, feedback forms, authorizations, and other input fields.\n\n✨ Features\n🎯 Context Menu — right-click in any input field → select and paste text\n➕ Unlimited entries — add logins, emails, addresses, phones, text templates\n🔄 Drag&Drop — drag entries to sort\n📋 Copy — copy values with one click\n📤 Export/Import — transfer data between browsers and devices\n💾 Local storage — 100% privacy, data only on your device",
+    "description": "Detailed listing text for CWS"
+  }
+}
