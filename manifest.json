@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "BroPaste",
-  "description": "Quickly paste predefined text snippets via context menu. Paste predefined text snippets into input fields via popup and context menu. Works only on user action, does not collect or send any browsing data.",
+  "description": "Quickly fill forms using saved text snippets via context menu or popup. Fast, handy, and secure autofill tool.",
   "version": "1.0.0",
 
   "icons": {
@@ -30,4 +30,5 @@
     "activeTab",
     "scripting"
   ]
+
 }
