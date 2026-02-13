@@ -1,49 +1,103 @@
-# 📋 BroPaste
+<div align="center">
+  <img src="icons/icon128.png" alt="BroPaste Logo" width="100" height="100">
 
-**#BroPaste — Convenient form filling via context menu**
+  <h1>BroPaste</h1>
+  
+  <p>
+    <b>Fast and secure form filling with saved text snippets.</b>
+  </p>
 
-Chrome extension for quick filling of registration forms, surveys, feedback forms, authorizations, and other input fields.
+  <p>
+    <a href="#-features">Features</a> •
+    <a href="#-installation">Installation</a> •
+    <a href="#-screenshots">Screenshots</a> •
+    <a href="#-bropaste---автозаполнение-форм-и-шаблоны-текста">Русская версия 🇷🇺</a>
+  </p>
 
-## ✨ Features
-
-- **🎯 Context Menu** — right-click in any input field → select and paste text
-- **➕ Unlimited entries** — add logins, emails, addresses, phones, text templates
-- **🔄 Drag&Drop** — drag entries to sort
-- **📋 Copy** — copy values with one click
-- **📤 Export/Import** — transfer data between browsers and devices
-- **💾 Local storage** — 100% privacy, data only on your device
-
-## 🎯 Use Cases
-
-| Situation | Example Entry |
-|-----------|---------------|
-| Registration | `name: John Doe`, `email: john@test.com`, `phone: +1-234-567-8900` |
-| Survey | `company: Tech Corp`, `position: Developer` |
-| Feedback Form | `message: Interested in purchasing...` |
-| Login | `username: mylogin`, `password: mypass123` |
+  ![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000)
+  ![License](https://img.shields.io/badge/license-MIT-green.svg)
+  ![Privacy](https://img.shields.io/badge/privacy-100%25%20local-success)
+</div>
 
 ---
 
-# 📋 BroPaste
+## 🚀 Overview
 
-**#BroPaste — удобное заполнение форм через контекстное меню**
+**BroPaste** helps you save time, reduce typing errors, and stay productive. Save frequently used text and quickly insert it into any input field using the context menu or popup. 
 
-Расширение для быстрого заполнения регистрационных форм, анкет, форм обратной связи, авторизаций и других полей ввода.
+Perfect for registration forms, login pages, surveys, feedback forms, customer support replies, and everyday repetitive typing.
 
-## ✨ Возможности
+## ✨ Features
 
-- **🎯 Контекстное меню** — правый клик в любое поле ввода → выбрать и вставить текст
-- **➕ Неограниченные записи** — добавляйте логины, email, адреса, телефоны, шаблоны текста
-- **🔄 Drag&Drop** — перетаскивайте записи для сортировки
-- **📋 Копирование** — копируйте значения одним кликом
-- **📤 Экспорт/Импорт** — переносите данные между браузерами и устройствами
-- **💾 Локальное хранение** — 100% приватность, данные только на вашем устройстве
+- **🖱️ Context Menu Integration** Right-click any input field and insert saved text instantly without opening the extension.
 
-## 🎯 Примеры использования
+- **🧠 Smart Paste Engine** Works flawlessly even on complex websites (like Google Forms, React apps) where standard pasting often fails.
 
-| Ситуация | Пример записи |
-|----------|---------------|
-| Регистрация | `name: Иванов Иван`, `email: ivan@test.ru`, `phone: +7(900)123-45-67` |
-| Анкета | `company: ООО Ромашка`, `position: Разработчик` |
-| Форма обратной связи | `message: Интересует покупка...` |
-| Авторизация | `login: mylogin`, `password: mypass123` |
+- **📝 Unlimited Entries** Store emails, usernames, addresses, phone numbers, code templates, and more.
+
+- **🎨 Theme Support** Automatically adapts to **Light** or **Dark** mode based on your browser preferences.
+
+- **🔄 Drag & Drop Sorting** Organize your snippets easily to keep important ones at the top.
+
+- **📋 One-click Copy** Quickly copy values to your clipboard directly from the popup.
+
+- **💾 Import & Export** Backup your data or transfer it between browsers and devices (JSON format).
+
+- **🔒 100% Local Storage** Your data stays on your device. No cloud, no tracking.
+
+## 📦 Installation
+
+### From Chrome Web Store
+*(Add link here once published)*
+
+### Manual Installation (Developer Mode)
+1. Clone or download this repository.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable **Developer mode** (toggle in the top-right corner).
+4. Click **Load unpacked**.
+5. Select the folder containing the `manifest.json` file.
+
+## 🖼 Screenshots
+
+*(Place your screenshots here, e.g., `![Popup Dark Mode](screenshots/popup_dark.png)`)
+*(Place your screenshots here, e.g., `![Context Menu](screenshots/context_menu.png)`)
+
+---
+
+<div align="center" id="ru">
+  <h1>BroPaste (RU)</h1>
+  <p><b>Автозаполнение форм и шаблоны текста</b></p>
+</div>
+
+**BroPaste** — это быстрое и безопасное расширение для вставки заготовленных текстов.
+
+Забудьте о ручном наборе одних и тех же фраз! Сохраняйте часто используемые фрагменты (адреса, электронную почту, ответы клиентам, шаблоны кода) и мгновенно вставляйте их в любое поле на веб-странице с помощью правой кнопки мыши.
+
+## ✨ Основные возможности
+
+- **🖱️ Вставка из контекстного меню** Просто нажмите правую кнопку мыши в любом поле ввода и выберите нужный шаблон.
+
+- **🧠 Умный алгоритм вставки** Специальный движок корректно вставляет текст даже в сложные формы (например, Google Forms или динамические редакторы), где обычный буфер обмена часто не срабатывает.
+
+- **🎨 Темная и Светлая темы** Интерфейс автоматически подстраивается под настройки вашего браузера. Выглядит отлично в любом режиме.
+
+- **📝 Неограниченное количество записей** Храните столько шаблонов, сколько вам нужно.
+
+- **🔄 Сортировка Drag & Drop** Легко меняйте порядок записей перетаскиванием, чтобы важное всегда было под рукой.
+
+- **💾 Импорт и Экспорт** Создавайте резервные копии своих баз или переносите их между компьютерами (формат JSON).
+
+- **🔒 100% Приватность** Все данные хранятся локально на вашем устройстве с использованием `chrome.storage.local`. Никаких облаков и отслеживания.
+
+## 🛠 Как использовать
+
+1. Нажмите на иконку расширения, чтобы добавить новый текст.
+2. Нажмите **ПКМ** (правую кнопку мыши) на любом поле ввода на сайте.
+3. Наведите курсор на пункт **BroPaste** и выберите текст.
+4. Готово!
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by BroExtentions</sub>
+</div>
