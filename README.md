@@ -54,7 +54,6 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 
 ## 📦 Installation
 
-### Manual Installation (Developer Mode)
 1. Clone or download this repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable **Developer mode** (toggle in the top-right corner).
