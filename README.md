@@ -47,9 +47,6 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 
 ## 📦 Installation
 
-### From Chrome Web Store
-*(Add link here once published)*
-
 ### Manual Installation (Developer Mode)
 1. Clone or download this repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
