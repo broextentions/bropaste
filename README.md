@@ -57,11 +57,6 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 4. Click **Load unpacked**.
 5. Select the folder containing the `manifest.json` file.
 
-## 🖼 Screenshots
-
-*(Place your screenshots here, e.g., `![Popup Dark Mode](screenshots/popup_dark.png)`)
-*(Place your screenshots here, e.g., `![Context Menu](screenshots/context_menu.png)`)
-
 ---
 
 <div align="center" id="ru">
