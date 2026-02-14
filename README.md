@@ -62,55 +62,9 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 
 <div align="center">
 
-## 🚀 Bropaste в действии
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="https://github.com/broextentions/assets/raw/main/img/bropaste/poster1280x800.png" width="800">
-      <br><strong>Главный постер</strong>
-    </td>
-  </tr>
-</table>
-
-### Баннеры и превью
-
-<table>
-  <tr>
-    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/banner.png" width="400"></td>
-    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/poster440x280.png" width="300"></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Основной баннер</strong></td>
-    <td align="center"><strong>Превью карточка</strong></td>
-  </tr>
-</table>
-
-### Темы Light/Dark + Локализация
-
-<table>
-  <tr>
-    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/bro-en.png" width="350"></td>
-    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/bro-en-dark.png" width="350"></td>
-    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/bro-ru.png" width="350"></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>English Light</strong></td>
-    <td align="center"><strong>English Dark</strong></td>
-    <td align="center"><strong>Русский Light</strong></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/bro-ru-dark.png" width="350"></td>
-    <td colspan="2"></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>Русский Dark</strong></td>
-    <td colspan="2"></td>
-  </tr>
-</table>
+![Bropaste Preview](https://github.com/broextentions/assets/raw/main/img/bropaste/bropaste-preview.gif)
 
 </div>
-
 
 ---
 <a id="-bropaste-ru"></a>
