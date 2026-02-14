@@ -21,7 +21,7 @@
 
 ---
 
-<img src="/broextentions/assets/blob/main/img/bropaste/poster1280x800.png" alt="BroPaste banner" width="1280" height="800">
+<img src="https://github.com/broextentions/assets/blob/main/img/bropaste/banner-en.png" alt="BroPaste banner" width="1280" height="800">
 
 ## 🚀 Overview
 
