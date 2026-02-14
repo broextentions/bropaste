@@ -105,14 +105,15 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 
 ---
 
-<div align="center">
-  <sub style="display: inline-block; vertical-align: middle; padding-top: 20px;">
-    Built with&nbsp;
-    <a href="https://github.com/broextentions">
-      <img src="vendor/logo/logo.png" 
-           width="70" 
-           style="vertical-align: middle; display: inline-block;">
-    </a>
-  </sub>
-</div>
-
+<table align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="middle">
+      <sub>Built with&nbsp;</sub>
+    </td>
+    <td valign="middle">
+      <a href="https://github.com/broextentions">
+        <img src="vendor/logo/logo.png" width="70" height="70" alt="Logo">
+      </a>
+    </td>
+  </tr>
+</table>
