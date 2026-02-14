@@ -21,6 +21,8 @@
 
 ---
 
+<img src="/broextentions/assets/blob/main/img/bropaste/poster1280x800.png" alt="BroPaste banner" width="1280" height="800">
+
 ## 🚀 Overview
 
 **BroPaste** helps you save time, reduce typing errors, and stay productive. Save frequently used text and quickly insert it into any input field using the context menu or popup. 
