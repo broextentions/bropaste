@@ -106,7 +106,7 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 ---
 
 <div align="center">
-  <sub>Built with BroExtentions</sub><br>
+  <sub>Built with BroExtentions</sub><br><br>
   <a href="https://github.com/broextentions">
     <img src="vendor/logo/logo.png" 
          width="70" 
