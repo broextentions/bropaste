@@ -21,8 +21,6 @@
 
 ---
 
-<img src="https://github.com/broextentions/assets/blob/main/img/bropaste/banner-en.png" alt="BroPaste banner" width="1280" height="800">
-
 ## 🚀 Overview
 
 **BroPaste** helps you save time, reduce typing errors, and stay productive. Save frequently used text and quickly insert it into any input field using the context menu or popup. 
@@ -61,6 +59,58 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 3. Enable **Developer mode** (toggle in the top-right corner).
 4. Click **Load unpacked**.
 5. Select the folder containing the `manifest.json` file.
+
+<div align="center">
+
+## 🚀 Bropaste в действии
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/broextentions/assets/raw/main/img/bropaste/poster1280x800.png" width="800">
+      <br><strong>Главный постер</strong>
+    </td>
+  </tr>
+</table>
+
+### Баннеры и превью
+
+<table>
+  <tr>
+    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/banner.png" width="400"></td>
+    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/poster440x280.png" width="300"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Основной баннер</strong></td>
+    <td align="center"><strong>Превью карточка</strong></td>
+  </tr>
+</table>
+
+### Темы Light/Dark + Локализация
+
+<table>
+  <tr>
+    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/bro-en.png" width="350"></td>
+    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/bro-en-dark.png" width="350"></td>
+    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/bro-ru.png" width="350"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>English Light</strong></td>
+    <td align="center"><strong>English Dark</strong></td>
+    <td align="center"><strong>Русский Light</strong></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/broextentions/assets/raw/main/img/bropaste/bro-ru-dark.png" width="350"></td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Русский Dark</strong></td>
+    <td colspan="2"></td>
+  </tr>
+</table>
+
+</div>
+
 
 ---
 <a id="-bropaste-ru"></a>
