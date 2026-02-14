@@ -61,7 +61,7 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 5. Select the folder containing the `manifest.json` file.
 
 ---
-
+<a id="-bropaste-ru"></a>
 <div align="center" id="ru">
   <h1>BroPaste (RU)</h1>
   <p><b>Автозаполнение форм и шаблоны текста</b></p>
