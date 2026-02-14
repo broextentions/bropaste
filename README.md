@@ -106,11 +106,11 @@ Perfect for registration forms, login pages, surveys, feedback forms, customer s
 ---
 
 <div align="center">
-  <sub>Built with BroExtentions</sub><br><br>
+  <sub>Built with BroExtentions</sub><br>
   <a href="https://github.com/broextentions">
     <img src="vendor/logo/logo.png" 
-         width="70" 
-         height="70" 
+         width="65" 
+         height="65" 
          alt="Logo_BroExtentions">
   </a>
 </div>
